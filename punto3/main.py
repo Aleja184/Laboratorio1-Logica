@@ -1,6 +1,6 @@
 from cajas import Cajas_Disponibles
 from pedidos import Pedidos
-
+#Pruebas
 if __name__ == '__main__':
     cajas = Cajas_Disponibles()
     cajas.insertar("1515")
@@ -11,5 +11,7 @@ if __name__ == '__main__':
     pedidos = Pedidos(cajas)
     pedidos.insertar()
     pedidos.insertar()
+    pedidos.insertar()
+    pedidos.eliminar()
     pedidos.insertar()
     pedidos.imprimir()
