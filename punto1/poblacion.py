@@ -1,11 +1,11 @@
 from nodo_poblacion import NodoP
 from vecindad1 import Vecindad1
 from vecindad2 import Vecindad2
-
+#Nueva población, es una lista doblemente ligada
 class Poblacion: 
     def __init__(self):
         self.cabecera = None
-
+    #Este método recibe la pareja que quiera formar parte de la nueva población y aplica las condiciones para saber si pasan o no
     def insertar(self,persona1,persona2):
         nodo_nuevo = None
         nodo_nuevo2 = None
@@ -28,7 +28,8 @@ class Poblacion:
             nodo_nuevo.siguiente = nodo_nuevo2
             nodo_nuevo2.anterior = nodo_nuevo
 
-
+    #Este método toma el id de la persona que se quiere eliminar, cuando la encuentra toma el id de su pareja que tiene asociado
+    #para posteriormente eliminar a su pareja de la nueva población también
     def eliminar(self,id):
         if self.cabecera.persona.id == id:
             nodo_siguiente_pareja = self.cabecera.siguiente.siguiente 
@@ -59,6 +60,7 @@ class Poblacion:
             nodo_anterior.siguiente = nodo_siguiente
             nodo_siguiente.anterior = nodo_anterior
 
+    #Imprime cada miembro de la nueva población
     def imprimir(self):
         nodo_actual = self.cabecera
         while nodo_actual.siguiente != None:

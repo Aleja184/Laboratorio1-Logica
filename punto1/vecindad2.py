@@ -1,5 +1,8 @@
 from nodo import Nodo
-
+#Lista simplemente ligada circular, son las personas de la vecindad 2. Contiene los métodos
+#Insertar: Para agregar una nueva persona a la vecindad
+#Eliminar: Eliminar una persona de la vecindad según su identificador
+#Imprimir: Para imprimir los miembros de la vecindad
 class Vecindad2:
     def __init__(self):
         self.cabecera = None
@@ -35,7 +38,6 @@ class Vecindad2:
                 print(f"{nodo_actual.nombre}->")
                 nodo_actual = nodo_actual.siguiente
             print(nodo_actual.nombre)
-            print(nodo_actual.siguiente.nombre)
     
     def eliminar(self,id):
         if self.cabecera == None:

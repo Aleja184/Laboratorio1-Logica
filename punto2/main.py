@@ -1,5 +1,5 @@
 from supermercado import Supermercado
-
+#Pruebas
 if __name__ == '__main__':
     supermercado = Supermercado()
     supermercado.insertar("Alejandra",10)
